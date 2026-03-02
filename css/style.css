@@ -1,0 +1,1085 @@
+/* --- 1. BIEN MAU SAC & THIET LAP CHUNG --- */
+:root {
+    --bg-main: #fcf9f5;        
+    --nav-bg: #1a1512;          /*Mau nen navbar*/
+    --primary: #9556268b;        /*Mau nau chinh*/
+    --primary-light: #6e3d188b;   
+    --accent: #4f3422;          
+    --text-main: #2d1b10;       
+    --text-white: #ffffff;
+    --shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: var(--bg-main);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* Container chuan cho cac section */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- 2. THANH DIEU HUONG (NAVBAR) --- */
+.navbar {
+    background: var(--nav-bg);
+    padding: 3px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    border-bottom: 3px solid #996838;
+    z-index: 1000; 
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 10px 5%;
+}
+
+.user-menu-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #996838;
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 1.7rem;
+}
+
+.logo-img-wrapper {
+    width: 100px;  
+    height: 100px;
+    border-radius: 100%; 
+    overflow: hidden; 
+    border: 2px solid #b3906e; 
+}
+.logo-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+.brand-name {
+    font-size: 24px;
+    font-weight: 700;
+    color: #b3906e; 
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Arial', sans-serif;
+}
+
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: var(--text-white);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #996838;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: var(--text-white);
+}
+
+.nav-icons {
+    display: flex;
+    gap: 20px;
+    font-size: 1.1rem;
+}
+
+.cart-icon {
+    position: relative;
+    color: inherit;
+    text-decoration: none;
+}
+
+#cart-count {
+    position: absolute;
+    top: -10px;
+    right: -12px;
+    background: var(--accent);
+    color: white;
+    font-size: 0.7rem;
+    padding: 2px 7px;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.btn-login-nav {
+    background:var(--accent);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-login-nav:hover {
+    background: #996838;
+    transform: scale(1.05);
+}
+
+/* --- 3. HERO SECTION --- */
+.hero {
+    height: 90vh;
+    background: linear-gradient(rgba(54, 43, 35, 0.8), rgba(26, 21, 18, 0.8)), url('../img/bg.png'); 
+    background-color: #1a1512;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 0 8%;
+    margin-top: 75px;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-text h1 span {
+    color: #996838;
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    max-width: 500px;
+    color: #ccc;
+}
+
+.btn-cta {
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 15px 35px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-cta:hover {
+    background: white;
+    color: var(--nav-bg);
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 500px;
+    filter: drop-shadow(0 20px 30px rgba(0,0,0,0.5));
+}
+
+/* --- ABOUT SECTION --- */
+.about-section {
+    padding: 100px 0;
+    background-color: #4f3422; 
+    color: #ffffff; 
+    scroll-margin-top: 80px;
+}
+
+.about-text h2 {
+    font-size: 2rem;
+    color:#ffffffff; 
+    margin-bottom: 25px;
+    font-weight: 800;
+}
+
+.about-text p {
+    font-size: 1.3rem;
+    color: #ffffffff; 
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+/* CAc khoi tinh nang ben trong phan About */
+.feature-box {
+    flex: 1;
+    background: rgba(197, 193, 146, 0.15); 
+    border: 1px solid var(--primary-light); 
+    padding: 40px 20px;
+    border-radius: 20px;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+    background: rgba(197, 193, 146, 0.3); 
+}
+
+.feature-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white; 
+    margin-bottom: 10px;
+}
+
+.feature-label {
+    font-size: 1rem;
+    color: #ffffff; 
+    font-weight: 600;
+}
+
+/* --- 5. DANH SACH SAN PHAM (PRODUCT SECTION) --- */
+
+.product-section {
+    padding: 100px ;
+    background-color:#ad7c5c ;
+    scroll-margin-top: 80px;
+}
+
+.section-title-center {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 50px;
+    color: var(--nav-bg);
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 30px;            /* Khoang cach giua cac card san pham */
+    padding: 20px;
+    max-width: 1700px;    
+    margin: 1 auto;       /* Can giua toan bo luoi */
+    align-items: stretch; 
+}
+
+.product-card {
+    background: var(--primary-light);
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: var(--shadow);
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    flex-direction: column;
+    border: 3px solid rgba(0,0,0,0.05);
+    width: 100%; 
+    height: 100%;
+    box-sizing: border-box;
+}
+
+
+.product-card:hover {
+    transform: translateY(-12px);
+    background: #2811008b;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.product-img-box {
+    background: #ffffff;
+    border-radius: 20px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.product-img-box img {
+    max-width: 90%;
+    transition: 0.4s;
+}
+
+.product-card:hover .product-img-box img {
+    transform: scale(1.1);
+}
+
+.product-price {
+    background: var(--accent);
+    color: white;   
+    text-align: center;
+    padding: 8px;
+    border-radius: 10px;
+    font-weight: bold;
+    margin: 0 10px 15px 10px;
+}
+
+.product-info {
+    background: #fefcfa8b; 
+    padding: 20px 15px;
+    border-radius: 15px;
+    text-align: center;
+    flex-grow: 1;
+    flex-direction: column;
+    display: flex;
+}
+
+
+.product-name {
+    font-size: 1.1rem;
+    min-height: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--nav-bg);
+    margin: 10px 0;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.product-desc {
+    font-size: 1rem;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.btn-add-cart {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: var(--text-white);
+    margin-top: auto;
+    color: var(--nav-bg);
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+.btn-add-cart:hover {
+    background: var(--nav-bg);
+    color: white;
+}
+
+/* --- 6. FOOTER --- */
+.footer-container {
+    background-color: #935c35; 
+    width: 100%;
+    padding-top: 60px; 
+    font-family: 'Arial', sans-serif;
+}
+
+.footer-main-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start; 
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 5%;
+    gap: 30px;
+}
+
+
+.footer-col {
+    flex: 1 1 200px; 
+    margin-bottom: 20px;
+}
+
+.footer-col:first-child {
+    flex: 2 1 300px; 
+}
+
+.footer-col:not(:first-child), 
+.footer-box {
+    flex: 1 1 200px; 
+}
+
+.footer-col h3, .footer-box h3 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 25px; 
+    color: #000;
+}
+
+.footer-col p {
+    font-size: 18px;
+    line-height: 1.4;
+    text-align: justify; 
+    color: #000000;
+    margin-bottom: 30px;
+}
+
+.footer-col li {
+    list-style: none;
+    margin-bottom: 12px;
+}
+
+.footer-col li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.footer-col li a:hover {
+    color: #fff;
+    padding-left: 5px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    background: #fff;
+    color: #000;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 18px;
+}
+
+.social-icons a:hover {
+    background: #000;
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+/* Phan lien he - Can chinh de text khong bi de` len icon */
+.contact {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.contact span {
+    font-size: 18px;
+    color: #000;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.contact i {
+    font-size: 20px;
+    color: #000;
+    width: 25px; 
+    text-align: center;
+}
+
+/* Dinh dang ban do  */
+iframe {
+    width: 100%; 
+    height: 160px;
+    border: 2px solid #fff !important; 
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.footer-bottom {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+/*============*/
+/* --- 7.TRANG DANG NHAP & DANG KY --- */
+/* Nen toan trang Login */
+.auth-page {
+    background-color: url(../img/bg.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; 
+    padding: 80px 20px 40px; 
+    overflow-y: auto;
+    position: relative;
+}
+
+.back-to-home {
+    position: relative; 
+    align-self: flex-start;
+    margin-bottom: 30px;
+    color: #000000;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    font-size: 1.3rem;
+    z-index: 10;
+    transition: 0.3s;
+}
+
+
+.back-to-home:hover {
+    color: rgb(224, 13, 13);
+    transform: translateX(-5px);
+}
+
+/* Khung boc Form */
+.auth-wrapper {
+    width: 100%;
+    max-width: 450px;
+    padding: 20px;
+}
+
+.auth-container {
+    background: #ffffff;
+    border-radius: 30px;
+    padding: 40px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    position: relative;
+}
+
+.auth-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.auth-header img {
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid var(--accent);
+}
+
+.auth-header h2 {
+    color: var(--nav-bg);
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+
+.auth-header p {
+    color: #777;
+    font-size: 0.9rem;
+}
+
+/* Input groups */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+    font-size: 0.9rem;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    outline: none;
+    transition: 0.3s;
+    background: #f9f9f9;
+}
+
+.input-group input:focus {
+    border-color: var(--accent);
+    background: #fff;
+    box-shadow: 0 0 8px rgba(212, 163, 115, 0.2);
+}
+
+/* Password wrapperde hien/an mat khau */
+.password-wrapper {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #999;
+}
+
+/* Options (Ghi nho & Quen mat khau) */
+.auth-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    margin-bottom: 25px;
+}
+
+.auth-options a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Nut Dang nhap/Dang ky */
+.btn-auth {
+    width: 100%;
+    padding: 14px;
+    background: var(--nav-bg);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-auth:hover {
+    background: var(--accent);
+    transform: translateY(-2px);
+}
+
+/* Switch Auth (Link chuyen giua Login/Register) */
+.switch-auth {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.switch-auth a {
+    color: var(--accent);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Class an Form khi chua chon */
+.hidden {
+    display: none;
+}
+
+#login-form, #register-form {
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.search-wrapper {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    padding: 5px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+    width: 40px; 
+}
+
+/*=========================================*/
+/*8/ Search */
+/* ============================================================
+ /* Trang thai an */
+.search-bar-hidden {
+    display: none !important;
+}
+
+/* Trang thai hien thi: Nam sat duoi Navbar*/
+.search-bar-visible {
+    display: block !important;
+    position: fixed !important;
+    top: 120px;            /* Khop voi chieu cao Navbar */
+    left: 0;
+    width: 100%;
+    background: var(--primary) !important;
+    padding: 10px 0;     
+    z-index: 700;
+    border-bottom: 1px solid #ad7c5c;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    animation: slideDownFast 0.2s ease-out;
+}
+
+/* Khung boc o nhap lieu*/
+.search-wrapper-simple {
+    display: flex;
+    align-items: center;
+    max-width: 600px;    
+    margin: 0 auto;
+    background: #fff;
+    border: 1px solid #ad7c5c;
+    padding: 5px 20px;   
+    border-radius: 30px;  
+}
+
+.search-wrapper-simple input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 8px 0;      
+    font-size: 0.95rem;   
+    color: #333;
+}
+
+.search-wrapper-simple i {
+    color: #ad7c5c;
+    font-size: 0.9rem;
+    margin-right: 12px;
+}
+
+@keyframes slideDownFast {
+    from { transform: translateY(-10px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.search-toggle-btn {
+    background: none;
+    border: none;
+    color: #ffffffff;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 5px 10px;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.search-toggle-btn:hover {
+    transform: scale(1.1);
+    color:#996838 ;
+}
+
+.suggestions-box {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    max-height: 300px;
+    overflow-y: auto;
+    display: none; 
+}
+
+.suggestion-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-bottom: 1px solid #f0f0f0;
+    transition: 0.2s;
+}
+
+.suggestion-item:hover {
+    background: #f9f5f2;
+}
+
+.suggestion-item img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    margin-right: 15px;
+    border-radius: 5px;
+}
+
+.suggestion-item span {
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.no-exist {
+    padding: 15px;
+    text-align: center;
+    color: #888;
+    font-style: italic;
+}
+
+/*==========*/
+/*9 Cart
+Hieu ung tong the cho cum icon gio hang */
+.cart-icon {
+    position: relative;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+/*Khi di chuot vao icon cart*/
+.cart-icon:hover {
+    transform: translateY(-3px) scale(1.1); /* Nhay nhe len va phong to */
+    color: var(--accent) !important; 
+}
+
+/* Hieu ung cho con so thong bao (Badge) khi hover */
+.cart-icon:hover #cart-count {
+    background-color: #ffffff; /* Doi nen badge sang trang */
+    color: #996838;     
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); 
+}
+
+@keyframes cartBounce {
+    0%, 100% { transform: translateY(-3px) rotate(0); }
+    50% { transform: translateY(-3px) rotate(10deg); }
+}
+
+.cart-icon:hover i {
+    animation: cartBounce 0.5s ease infinite;
+}
+
+/* Container can giua */
+.category-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px 0;
+    background-color: transparent; 
+}
+
+/* Style nut bam co ban */
+.cat-btn {
+    padding: 12px 28px;
+    border: 5px solid rgba(0, 0, 0, 0. 0); 
+    background: rgba(0, 0, 0, 0.1);   
+    color: #000000;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 50px; 
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px); 
+}
+
+/* Hieu ung khi di chuot (Hover) */
+.cat-btn:hover {
+    background: #ad7c5c;
+    border-color: #ad7c5c;
+    color: #fff;
+    transform: translateY(-3px); 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Trang thai dang duoc chon (Active) */
+.cat-btn.active {
+    background: #3d2b1f; 
+    border-color: #ad7c5c; 
+    color: #fff;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.3); 
+}
+
+/* --- 10. RESPONSIVE --- */
+
+/* --- THIẾT LẬP MẶC ĐỊNH CHO DESKTOP --- */
+#menu-toggle, .hamburger, .mobile-only {
+    display: none; 
+}
+
+.pc-only {
+    display: block;
+}
+
+/* --- TABLET (769px - 1024px) --- */
+@media (max-width: 1024px) {
+    .nav-container { padding: 15px 3%; }
+    .product-grid { grid-template-columns: repeat(3, 1fr); }
+    .footer-main-content { flex-wrap: wrap; justify-content: center; }
+    .footer-col { flex: 1 1 40%; }
+}
+
+/* --- MOBILE CHUNG (Dưới 768px) --- */
+@media (max-width: 768px) {
+    .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
+    }
+
+   .logo {
+        display: flex;
+        align-items: center;
+        flex-shrink: 0; 
+    }
+
+    .logo-img-wrapper {
+        width: 100px;         
+        height: 100px;       
+        border: 2px solid #ff9f43; 
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #331d0f;
+        overflow: hidden;
+        margin-right: 10px;  
+    }
+
+    .logo-img-wrapper img {
+        width: 85%;          
+        height: 85%;         
+        object-fit: contain; 
+    }
+    /* 1. Header & Hamburger */
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 25px;
+        height: 18px;
+        cursor: pointer;
+        margin-left: 5px;
+        flex-shrink: 0;
+    }
+    .brand-name {
+        display: none; 
+    }
+    .hamburger span { width: 100%; height: 3px; background: #fff; transition: 0.3s; }
+
+    .pc-only { display: none !important; }
+    .mobile-only { display: block !important; width: 100%; text-align: center; }
+
+    /* 2. Menu sổ xuống (Nav Links) */
+    .nav-links {
+        position: absolute;
+        top: 100%; left: 0; width: 100%;
+        background: #4f3422;
+        flex-direction: column;
+        align-items: center;
+        max-height: 0;
+        overflow: hidden;
+        transition: 0.4s ease;
+        z-index: 999;
+        padding: 0; 
+    }
+    #menu-toggle:checked ~ .nav-links { max-height: 600px; padding: 20px 0; }
+/*
+    .user-mobile-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+        width: 100%;
+        color: #ff9f43;
+    }
+    .user-mobile-info i { font-size: 2rem; margin-bottom: 5px; }
+    
+    
+    .btn-login-nav {
+        padding: 6px 12px;
+        font-size: 12px;
+        background: #ff9f43;
+        border-radius: 20px;
+        white-space: nowrap;
+    }
+    #user-name-display {
+        max-width: 60px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 13px;
+    }
+*/
+    /* 4. Cụm Icon bên phải (Search & Cart)
+    .nav-right {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 15px;
+        margin-right: 12px; 
+    }
+ */   
+
+    /* 5. Layout Nội dung */
+    .product-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; }
+    .footer-main-content { flex-direction: column; align-items: center; text-align: center; }
+    .footer-col { width: 100%; margin-bottom: 25px; }
+}
+
+/* --- MOBILE NHỎ (Dưới 480px) --- */
+@media (max-width: 480px) {
+    .brand-name { font-size: 0.8rem; }
+    .product-grid { grid-template-columns: 1fr; } /* 1 hàng 1 sản phẩm */
+    .home-text h1 { font-size: 1.5rem; }
+    
+    .user-menu-dropdown {
+        right: 0 !important;
+        width: 100vw; 
+    }
+    .nav-right {
+        gap: 8px;
+    }
+    .logo-img-wrapper img {
+        width: 35px; 
+    }
+}
+
+
+
+
+
+
+
+
+/*=======================================*/
+.user-menu-wrapper { position: relative; display: flex; align-items: center; cursor: pointer; }
+.dropdown-content {
+    display: none; position: absolute; top: 100%; right: 0;
+    background-color: white; min-width: 180px; border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2); z-index: 10; padding: 10px 0;
+}
+.user-menu-wrapper.active .dropdown-content {
+    display: block;
+}
+.dropdown-content a { color: #333; padding: 10px 15px; text-decoration: none; display: block; font-size: 0.9rem; }
+.dropdown-content a:hover { background-color: #f1f1f1; color: var(--accent); }
